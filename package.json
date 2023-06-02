@@ -9,13 +9,22 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@apollo/client": "^3.7.15",
+    "@emailjs/browser": "^3.11.0",
     "@quasar/extras": "^1.0.0",
+    "@vue/apollo-composable": "^4.0.0-beta.5",
+    "emailjs": "^4.0.2",
+    "graphql": "^15.8.0",
+    "graphql-tag": "^2.12.6",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
-    "vue-router": "^4.0.0"
+    "vue-router": "^4.0.0",
+    "vue3-carousel": "^0.3.1",
+    "vue3-youtube": "^0.1.9"
   },
   "devDependencies": {
     "@quasar/app-vite": "^1.0.0",
+    "@quasar/quasar-app-extension-apollo": "^2.0.0-beta.5",
     "autoprefixer": "^10.4.2",
     "postcss": "^8.4.14"
   },

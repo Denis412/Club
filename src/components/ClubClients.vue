@@ -1,0 +1,21 @@
+<template>
+  <section class="section-margin text-center container">
+    <div class="text-h3">Вступайте в 1Т Клуб, если вы</div>
+
+    <div class="relative-position">
+      <img class="q-mt-md" src="/assets/images/landing/branches1.svg" />
+      <img
+        src="/assets/images/landing-background/main-page/bg-13.svg"
+        class="absolute-center"
+      />
+    </div>
+
+    <c-categories-group />
+  </section>
+</template>
+
+<script setup>
+import CCategoriesGroup from "src/components/ClubCategoriesGroup.vue";
+</script>
+
+<style lang="scss" scoped></style>
