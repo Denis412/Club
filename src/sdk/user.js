@@ -4,9 +4,11 @@ import { subjectsPaginate } from "src/graphql/user/queries";
 
 import apolloClient from "src/apollo/apollo-client";
 
+import { spaceHeader } from "src/utils/spaceHeader";
+
 provideApolloClient(apolloClient);
 
-const paginateSubjects = () => {
+const paginateSubjects = (space_id) => {
   return useQuery(
     subjectsPaginate,
     {
@@ -18,7 +20,7 @@ const paginateSubjects = () => {
         value: JSON.parse(localStorage.getItem("user-data")).user_id,
       },
     },
-    process.env.MAIN_SPACE_ID
+    spaceHeader(space_id || process.env.MAIN_SPACE_ID)
   );
 };
 
