@@ -2,7 +2,7 @@
   <q-layout view="hHh LpR lff">
     <c-main-header />
 
-    <q-page-container v-if="currentUser">
+    <q-page-container>
       <router-view v-slot="{ Component }">
         <keep-alive>
           <component :is="Component" />
