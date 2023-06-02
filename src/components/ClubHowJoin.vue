@@ -6,7 +6,7 @@
           width="448"
           height="593"
           class="video"
-          src="https://www.youtube.com/embed/JLgNkXbrcTA?feature=share"
+          src="https://www.youtube.com/embed/eu6_-tFLvW4?feature=share"
           title="YouTube video player"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -24,15 +24,14 @@
         <h3 class="text-h3">Как вступить в 1Т Клуб?</h3>
 
         <p class="text-body2 q-mt-lg">
-          Присоединяйтесь к нашему IT-сообществу. Пройдите простую регистрацию
-          на сайте и станьте частью большой и дружной ㅤ IT-семьи!
+          Присоединяйтесь к нашему IT-сообществу. Пройдите простую регистрацию на сайте и станьте
+          частью большой и дружной ㅤ IT-семьи!
         </p>
 
-        <q-btn
-          flat
-          no-caps
+        <c-button
           to="/registration"
-          class="club-button-background text-button2 c-px-32 c-py-16 q-mt-lg"
+          background
+          class="text-button2 c-px-32 c-py-16 q-mt-lg"
           label="Вступить в 1Т клуб"
         />
       </div>
@@ -40,7 +39,9 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import CButton from "../ClubButton.vue";
+</script>
 
 <style lang="scss" scoped>
 .info-btn {
