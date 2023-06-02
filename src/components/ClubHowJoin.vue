@@ -28,10 +28,11 @@
           частью большой и дружной ㅤ IT-семьи!
         </p>
 
-        <c-button
+        <q-btn
+          flat
+          no-caps
           to="/registration"
-          background
-          class="text-button2 c-px-32 c-py-16 q-mt-lg"
+          class="club-button-outline text-button2 c-px-32 c-py-16 q-mt-lg"
           label="Вступить в 1Т клуб"
         />
       </div>
@@ -39,9 +40,7 @@
   </section>
 </template>
 
-<script setup>
-import CButton from "../ClubButton.vue";
-</script>
+<script setup></script>
 
 <style lang="scss" scoped>
 .info-btn {
