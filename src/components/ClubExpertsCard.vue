@@ -20,9 +20,6 @@ const { card } = defineProps({
 <style lang="scss" scoped>
 .experts {
   &-card {
-    max-width: 452px;
-    width: 100%;
-
     background: linear-gradient(
       101.5deg,
       rgba(16, 5, 34, 0.15) 37.03%,

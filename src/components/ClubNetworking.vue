@@ -2,8 +2,8 @@
   <section class="section">
     <h2 class="text-h2 text-center c-mb-24">Нетворкинг</h2>
     <p class="text-subtitle2 text-center c-mb-64">
-      Окружайте себя IT-экспертами, участвуйте в онлайн и офлайн мероприятиях и
-      расширяйте свой круг общения вместе с 1Т Клубом
+      Окружайте себя IT-экспертами, участвуйте в онлайн и офлайн мероприятиях и расширяйте свой круг
+      общения вместе с 1Т Клубом
     </p>
     <section class="networking-video c-mb-96">
       <div id="yt-video">
@@ -11,16 +11,14 @@
           src="https://www.youtube.com/watch?v=sCJrLLcSMe0"
           ref="youtube"
           @ready="onPlayerReady"
-          width="992"
-          height="558"
+          :width="ytVideo.width"
+          :height="ytVideo.height"
         />
       </div>
     </section>
 
     <section class="flex column flex-center">
-      <h3 class="text-h3 text-center c-mb-32">
-        Станьте участником мероприятий
-      </h3>
+      <h3 class="text-h3 text-center c-mb-32">Станьте участником мероприятий</h3>
 
       <q-btn
         flat
@@ -34,9 +32,15 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { event } from "quasar";
+import { ref, onMounted } from "vue";
 
 import YouTube from "vue3-youtube";
+
+const ytVideo = ref({
+  width: 992,
+  height: 558,
+});
 
 const onPlayerReady = (event) => {
   let options = {
@@ -45,10 +49,7 @@ const onPlayerReady = (event) => {
   };
 
   let observer = new IntersectionObserver((entries, observer) => {
-    if (
-      entries.length &&
-      entries.some((e) => e.target.id === "yt-video" && e.isIntersecting)
-    ) {
+    if (entries.length && entries.some((e) => e.target.id === "yt-video" && e.isIntersecting)) {
       event.target.mute();
       event.target.playVideo();
     }

@@ -17,7 +17,7 @@ const paginateSubjects = (space_id) => {
       where: {
         column: "user_id",
         operator: "EQ",
-        value: JSON.parse(localStorage.getItem("user-data")).user_id,
+        value: JSON.parse(localStorage.getItem("user-data"))?.user_id,
       },
     },
     spaceHeader(space_id || process.env.MAIN_SPACE_ID)

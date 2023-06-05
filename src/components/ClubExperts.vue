@@ -2,9 +2,8 @@
   <section class="section-mb section-margin">
     <h3 class="text-h3 text-center c-mb-64">Эксперты 1Т Клуба</h3>
     <Carousel
-      :itemsToShow="3"
-      :wrapAround="true"
-      :transition="700"
+      v-bind="settings"
+      :breakpoints="breakpoints"
       ref="carousel"
       class="c-mb-32 club-carousel experts-carousel"
     >
@@ -42,6 +41,28 @@ import "vue3-carousel/dist/carousel.css";
 import CExpertsCard from "src/components/Landing-develop/ClubExpertsCard.vue";
 
 const carousel = ref(null);
+
+const settings = {
+  itemsToShow: 0.5,
+  wrapAround: true,
+  transition: 700,
+};
+
+const breakpoints = {
+  768: {
+    itemsToShow: 1.5,
+  },
+  1024: {
+    itemsToShow: 2,
+  },
+  1440: {
+    itemsToShow: 3,
+  },
+  2560: {
+    itemsToShow: 5,
+  },
+};
+
 const expertsList = [
   {
     id: 1,

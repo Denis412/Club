@@ -16,11 +16,11 @@
       <c-banner />
       <c-course-sprint />
       <c-course-ai />
-      <c-networking />
+      <!-- нужен адаптив видео -->
+      <!-- <c-networking /> -->
       <c-partners />
       <c-string />
       <c-video-reviews />
-      <!-- нужны видео -->
     </main>
   </q-page>
 </template>

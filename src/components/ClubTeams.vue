@@ -3,13 +3,7 @@
     <h3 class="text-h3 text-center c-mb-16">IT-Команды 1Т Клуба</h3>
     <p class="text-subtitle2 text-center c-mb-64">Найдите IT-команду и реализуйте свои идеи</p>
 
-    <Carousel
-      :itemsToShow="3"
-      :wrapAround="true"
-      :transition="700"
-      ref="carousel"
-      class="team-carousel"
-    >
+    <Carousel v-bind="settings" :breakpoints="breakpoints" ref="carousel" class="team-carousel">
       <Slide v-for="slide in teamsList" :key="slide">
         <c-team-card :team="slide" />
       </Slide>
@@ -44,6 +38,22 @@ import "vue3-carousel/dist/carousel.css";
 import CTeamCard from "components/Landing-develop/ClubTeamCard.vue";
 
 const carousel = ref(null);
+
+const settings = {
+  itemsToShow: 1,
+  wrapAround: true,
+  transition: 700,
+};
+
+const breakpoints = {
+  768: {
+    itemsToShow: 2,
+  },
+  1089: {
+    itemsToShow: 3,
+  },
+};
+
 const teamsList = [
   {
     id: 1,
