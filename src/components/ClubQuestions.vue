@@ -1,5 +1,5 @@
 <template>
-  <section class="text-center container section-margin">
+  <section class="text-center container section-margin container">
     <h3 class="text-h3 text-left q-mb-xl">Часто задаваемые вопросы</h3>
     <c-faq-list :questions="questionList" class="q-pb-xl" />
   </section>
@@ -41,4 +41,13 @@ const questionList = ref([
   },
 ]);
 </script>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.container {
+  @media (max-width: 1000px) {
+    max-width: 290px;
+  }
+  @media (max-width: 1200px) and (min-width: 700px) {
+    max-width: 740px;
+  }
+}
+</style>
