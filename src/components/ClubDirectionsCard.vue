@@ -1,5 +1,5 @@
 <template>
-  <q-card class="card q-pa-lg column justify-between">
+  <q-card class="card q-pa-lg column justify-between q-my-sm">
     <div class="column justify-start">
       <header>
         <div class="text-h4 flex justify-start direction_card_header c-mb-12 z-max">

@@ -25,7 +25,14 @@ const { title, btnContent, cardsList } = defineProps({
 .directions {
   margin-top: 179px;
 }
-
+.container {
+  @media (max-width: 1000px) {
+    max-width: 290px;
+  }
+  @media (max-width: 1200px) and (min-width: 700px) {
+    max-width: 740px;
+  }
+}
 .subtitle {
   margin: 33px 0;
 }
