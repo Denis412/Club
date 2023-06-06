@@ -33,7 +33,7 @@
           no-caps
           to="/registration"
           class="club-button-outline text-button2 c-px-32 c-py-16 q-mt-lg"
-          label="Вступить в 1Т клуб"
+          label="Вступить в 1Т Клуб"
         />
       </div>
     </div>

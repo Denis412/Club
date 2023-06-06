@@ -18,7 +18,7 @@ import { ref, computed } from "vue";
 const translateRight = ref("");
 const translateLeft = ref("");
 const stringContent = {
-  mainText: "Вступить в 1т клуб",
+  mainText: "Вступить в 1Т Клуб",
   invertText: "Сейчас самое время",
 };
 
