@@ -1,8 +1,5 @@
 <template>
-  <q-form
-    class="form rounded-borders-12 flex column q-mt-xl"
-    @submit="sendEmail"
-  >
+  <q-form class="form rounded-borders-12 flex column q-mt-xl" @submit="sendEmail">
     <header class="text-h4 club-mb-32 text-center">Напишите нам</header>
 
     <main style="width: 100%">
@@ -124,7 +121,6 @@ const sendEmail = () => {
 .form {
   max-width: 448px;
   width: 448px;
-
   background: linear-gradient(
       101.5deg,
       rgba(16, 5, 34, 0.05) 37.03%,
@@ -134,6 +130,11 @@ const sendEmail = () => {
     rgba(18, 7, 36, 0.95);
   padding: 2rem 2rem;
   margin-left: 10rem;
+
+  @media (max-width: 500px) {
+    margin-left: 0rem;
+    width: 370px;
+  }
 
   &-control {
     margin-top: 1rem;
