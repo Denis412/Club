@@ -1,10 +1,8 @@
 <template>
-  <h3 class="text-h3 text-center section-margin q-pb-xl">
-    Отзывы участников 1Т Клуба
-  </h3>
+  <h3 class="text-h3 text-center section-margin q-pb-xl">Отзывы участников 1Т Клуба</h3>
 
   <Carousel
-    :itemsToShow="2.4"
+    :itemsToShow="num_slides"
     :wrapAround="true"
     :transition="500"
     ref="carousel"
@@ -12,11 +10,11 @@
   >
     <Slide v-for="slide in slides" :key="slide">
       <div class="row carousel__item">
-        <div class="col-5 test">
+        <div class="col-5 photo">
           <img :src="slide.photo" alt="" />
         </div>
 
-        <div class="col-7 q-pa-md text-left justify-between flex">
+        <div class="col q-pa-md text-left justify-between flex">
           <div class="text-body2">{{ slide.text }}</div>
 
           <div>
@@ -56,6 +54,12 @@ import { Carousel, Pagination, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 
 const carousel = ref(null);
+let num_slides = 2.4;
+const width = window.screen.width;
+
+if (width < 800) {
+  num_slides = 1;
+}
 const slides = [
   {
     name: "Татьяна Новикова",
@@ -119,6 +123,11 @@ const slides = [
       opacity: 0.5;
       transform: translateY(-5%) scale(0.9);
     }
+  }
+}
+.photo {
+  @media (max-width: 700px) {
+    display: none;
   }
 }
 </style>
