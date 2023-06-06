@@ -2,13 +2,7 @@
   <section class="section-mb">
     <h3 class="text-h3 text-center c-mb-64">Видеоотзывы участников 1Т Клуба</h3>
 
-    <Carousel
-      :itemsToShow="3"
-      :wrapAround="true"
-      :transition="700"
-      ref="carousel"
-      class="video-carousel"
-    >
+    <Carousel v-bind="settings" :breakpoints="breakpoints" ref="carousel" class="video-carousel">
       <Slide v-for="slide in reviewsList" :key="slide">
         <c-review-card :review="slide" />
       </Slide>
@@ -43,6 +37,19 @@ import "vue3-carousel/dist/carousel.css";
 import CReviewCard from "components/Landing-develop/ClubReviewCard.vue";
 
 const carousel = ref(null);
+
+const settings = {
+  itemsToShow: 1,
+  wrapAround: true,
+  transition: 700,
+};
+
+const breakpoints = {
+  1089: {
+    itemsToShow: 3,
+  },
+};
+
 const reviewsList = [
   {
     id: 1,
