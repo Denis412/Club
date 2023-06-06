@@ -1,10 +1,10 @@
 <template>
   <section class="flex no-wrap container items-center">
     <div class="col">
-      <h1 class="text-h1">{{ title }}</h1>
+      <h1 class="text-h1 my-header">{{ title }}</h1>
 
       <div class="row">
-        <p class="text-body2 q-mt-md col-10">
+        <p class="text-body2 q-mt-md col-lg-10 my-subtitle">
           {{ subtitle }}
         </p>
       </div>
@@ -25,7 +25,7 @@
           @click="scrollTo(requestBlock)"
         />
 
-        <a v-if="video" class="text-subtitle5 link" href="#about">
+        <a v-if="video" class="text-subtitle5 link my-btn" href="#about">
           <q-img
             class="play_video"
             src="/assets/images/Play_video.svg"
@@ -39,7 +39,7 @@
     </div>
 
     <q-img
-      class="col"
+      class="col desktop-only"
       style="max-width: 480px"
       :src="img || '/assets/images/amico.svg'"
     />
@@ -73,6 +73,20 @@ section {
   margin-top: 56px;
 }
 
+.container {
+  @media (max-width: 1000px) {
+    max-width: 290px;
+  }
+  @media (max-width: 1200px) and (min-width: 700px) {
+    max-width: 740px;
+  }
+}
+
+.my-btn {
+  @media (max-width: 1000px) {
+    margin-top: 20px;
+  }
+}
 .link {
   text-decoration: none;
   color: white;
