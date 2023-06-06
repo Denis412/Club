@@ -1,17 +1,15 @@
 <template>
   <q-header class="header-main flex flex-center bg-dark-purple c-px-32">
     <q-toolbar>
-      <q-img
-        class="logo cursor-pointer"
-        src="/assets/images/logo-white.svg"
-        @click="toRoot"
-        alt="logo"
-      />
-
       <q-toolbar-title class="flex no-wrap items-center">
-        <span class="text-h3" @click="toRoot">Клуб</span>
-
-        <q-tabs class="navigation main-tabs cursor-pointer">
+        <q-img
+          class="logo cursor-pointer"
+          src="/assets/images/logo-white.svg"
+          @click="toRoot"
+          alt="logo"
+        />
+        <span class="text-h3" @click="toRoot"><span class="desktop-only q-ml-md">Клуб</span></span>
+        <q-tabs class="navigation main-tabs cursor-pointer desktop-only">
           <q-route-tab
             no-caps
             name="business"
@@ -32,12 +30,12 @@
         </q-tabs>
       </q-toolbar-title>
 
-      <div v-if="!currentUser">
+      <div v-if="!currentUser" class="row">
         <q-btn
           flat
           no-caps
           to="/registration"
-          class="club-button-background-square text-button1 q-px-lg"
+          class="club-button-background-square text-button1 q-px-lg my-btn"
           label=" Вступить в 1T клуб"
         />
 
@@ -46,7 +44,7 @@
           no-caps
           to="/authentication"
           label="Войти"
-          class="club-button-outline-text-colored-square text-button1 bg-dark-purple q-ml-md q-px-lg"
+          class="club-button-outline-text-colored-square text-button1 bg-dark-purple q-ml-md q-px-lg my-btn"
         />
       </div>
 
@@ -104,7 +102,11 @@ const toRoot = () => {
 .logo {
   max-width: 40px;
 }
-
+.my-btn {
+  @media (max-width: 992px) {
+    padding: 0 10px;
+  }
+}
 .header-avatar {
   width: 64px;
   height: 64px;
