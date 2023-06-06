@@ -1,19 +1,19 @@
 <template>
   <section class="text-center section-margin container">
-    <div class="flex justify-between">
-      <div class="text-h1">
+    <div class="flex card justify-between">
+      <div class="text-h1 statistic q-my-md">
         200+
-        <div class="text-h2 text-violet-3">заказов</div>
+        <div class="text-h2 text-violet-3 statistic">заказов</div>
       </div>
 
-      <div class="text-h1">
+      <div class="text-h1 statistic q-my-md">
         1500+
-        <div class="text-h2 text-violet-3">участников</div>
+        <div class="text-h2 text-violet-3 statistic">участников</div>
       </div>
 
-      <div class="text-h1">
+      <div class="text-h1 statistic q-my-md">
         50+
-        <div class="text-h2 text-violet-3">Городов</div>
+        <div class="text-h2 text-violet-3 statistic">Городов</div>
       </div>
     </div>
 
@@ -68,8 +68,32 @@ const flag = ref(false);
     height: 338px;
   }
 }
-
+.container {
+  @media (max-width: 1000px) {
+    max-width: 290px;
+  }
+  @media (max-width: 1200px) and (min-width: 700px) {
+    max-width: 740px;
+  }
+}
+.statistic {
+  @media (max-width: 1000px) {
+    font-size: 40px !important;
+    text-align: center;
+  }
+  @media (max-width: 1200px) and (min-width: 700px) {
+    font-size: 40px !important;
+  }
+}
 .text-violet-3 {
   color: rgba(144, 67, 180, 1);
+}
+
+.card {
+  @media (max-width: 1000px) {
+    justify-content: center;
+  }
+  @media (max-width: 1200px) and (min-width: 700px) {
+  }
 }
 </style>
