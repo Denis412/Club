@@ -1,5 +1,5 @@
 <template>
-  <section class="section-margin how-join container">
+  <section class="section-margin how-join" :class="width < 500 ? '' : 'container'">
     <div class="row">
       <div class="col-6 relative-position">
         <iframe
@@ -20,12 +20,12 @@
         />
       </div>
 
-      <div class="col-6 c-mt-80 c-pt-40">
+      <div class="col-sm-12 col-lg-6 c-mt-80 c-pt-40 container">
         <h3 class="text-h3">Как вступить в 1Т Клуб?</h3>
 
         <p class="text-body2 q-mt-lg">
           Присоединяйтесь к нашему IT-сообществу. Пройдите простую регистрацию на сайте и станьте
-          частью большой и дружной ㅤ IT-семьи!
+          частью большой и дружной IT-семьи!
         </p>
 
         <q-btn
@@ -40,9 +40,20 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+const width = window.screen.width;
+console.log(width);
+</script>
 
 <style lang="scss" scoped>
+.container {
+  @media (max-width: 1000px) {
+    max-width: 290px;
+  }
+  @media (max-width: 1200px) and (min-width: 700px) {
+    max-width: 740px;
+  }
+}
 .info-btn {
   padding: 8px 20px;
 
