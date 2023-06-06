@@ -1,5 +1,5 @@
 <template>
-  <section class="section-margin relative-position container">
+  <section class="section-margin relative-position container desktop-only">
     <h4 class="text-h3 q-mb-xl text-center">C Нами вас ждет</h4>
     <div class="steps-wrapper">
       <c-step
