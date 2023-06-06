@@ -42,7 +42,6 @@
 
 <script setup>
 const width = window.screen.width;
-console.log(width);
 </script>
 
 <style lang="scss" scoped>
