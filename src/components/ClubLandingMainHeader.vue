@@ -34,7 +34,7 @@
           to="/registration"
           class="text-button1 q-px-lg"
           background-square
-          label="Вступить в 1T клуб"
+          label="Вступить в 1T Клуб"
         />
         <c-button
           to="/authentication"

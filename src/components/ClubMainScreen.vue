@@ -15,7 +15,7 @@
           no-caps
           class="club-button-background text-subtitle4 q-mr-lg c-px-32"
           to="/registration"
-          label="Вступить в 1Т клуб"
+          label="Вступить в 1Т Клуб"
         />
 
         <q-btn

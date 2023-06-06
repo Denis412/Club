@@ -38,7 +38,7 @@
           no-caps
           to="/registration"
           class="club-button-background-square text-button1 q-px-lg"
-          label=" Вступить в 1T клуб"
+          label=" Вступить в 1T Клуб"
         />
 
         <q-btn
