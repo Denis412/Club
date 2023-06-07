@@ -38,11 +38,7 @@
       </section>
     </div>
 
-    <q-img
-      class="col desktop-only"
-      style="max-width: 480px"
-      :src="img || '/assets/images/amico.svg'"
-    />
+    <q-img class="col img" style="max-width: 480px" :src="img || '/assets/images/amico.svg'" />
   </section>
 </template>
 
@@ -82,6 +78,11 @@ section {
   }
 }
 
+.img {
+  @media (max-width: 700px) {
+    display: none;
+  }
+}
 .my-btn {
   @media (max-width: 1000px) {
     margin-top: 20px;
