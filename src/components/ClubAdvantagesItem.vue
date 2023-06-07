@@ -1,7 +1,7 @@
 <template>
   <section
     class="advantage-item flex flex-start relative-position"
-    :style="item.id == 1 ? 'margin-left:160px' : ''"
+    :class="item.id == 1 ? 'first-card' : ''"
   >
     <q-img class="absolute-right advantage-img" src="assets/images/landing-business/plus.png" />
     <section class="absolute advantage-count">
@@ -53,5 +53,13 @@ const { id, item } = defineProps({
 
 .text {
   color: #ede5f0;
+}
+
+.first-card {
+  margin-left: 160px;
+
+  @media (max-width: 650px) {
+    margin-left: 20px;
+  }
 }
 </style>
