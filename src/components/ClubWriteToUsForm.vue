@@ -133,7 +133,7 @@ const sendEmail = () => {
 
   @media (max-width: 500px) {
     margin-left: 0rem;
-    width: 370px;
+    width: 100%;
   }
 
   &-control {
