@@ -84,13 +84,17 @@ const flag = ref(false);
   @media (max-width: 1200px) and (min-width: 700px) {
     font-size: 40px !important;
   }
+
+  @media (max-width: 850px) {
+    font-size: 35px !important;
+  }
 }
 .text-violet-3 {
   color: rgba(144, 67, 180, 1);
 }
 
 .card {
-  @media (max-width: 1000px) {
+  @media (max-width: 700px) {
     justify-content: center;
   }
   @media (max-width: 1200px) and (min-width: 700px) {
