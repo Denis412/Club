@@ -5,7 +5,7 @@
         <img src="/assets/images/Logo_no_gradient.svg" class="footer-logo" />
       </section>
 
-      <section class="q-gutter-y-lg col">
+      <section class="q-gutter-y-lg col nav">
         <div class="text-subtitle4 q-mb-sm">Навигация</div>
 
         <div class="text-gray5" v-for="n in nav" :key="n">
@@ -94,6 +94,10 @@ const socials = ref([
   &-logo {
     width: 56px;
   }
+  @media (max-width: 500px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .store-btn {
   width: 129px;
@@ -112,6 +116,11 @@ const socials = ref([
   }
 }
 
+.nav {
+  @media (max-width: 500px) {
+    display: none;
+  }
+}
 .footer-logo {
   height: 63px;
   width: 74px;
