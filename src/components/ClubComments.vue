@@ -2,7 +2,7 @@
   <h3 class="text-h3 text-center section-margin q-pb-xl">Отзывы участников 1Т Клуба</h3>
 
   <Carousel
-    :itemsToShow="num_slides"
+    :breakpoints="breakpoints"
     :wrapAround="true"
     :transition="500"
     ref="carousel"
@@ -54,12 +54,23 @@ import { Carousel, Pagination, Slide } from "vue3-carousel";
 import "vue3-carousel/dist/carousel.css";
 
 const carousel = ref(null);
-let num_slides = 2.4;
-const width = window.screen.width;
-
-if (width < 900) {
-  num_slides = 1;
-}
+const breakpoints = {
+  500: {
+    itemsToShow: 1,
+  },
+  768: {
+    itemsToShow: 1.2,
+  },
+  1024: {
+    itemsToShow: 1.7,
+  },
+  1440: {
+    itemsToShow: 2.5,
+  },
+  2560: {
+    itemsToShow: 5,
+  },
+};
 const slides = [
   {
     name: "Татьяна Новикова",
