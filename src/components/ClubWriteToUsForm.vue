@@ -131,6 +131,10 @@ const sendEmail = () => {
   padding: 2rem 2rem;
   margin-left: 10rem;
 
+  @media (max-width: 850px) {
+    margin-left: 12rem;
+  }
+
   @media (max-width: 500px) {
     margin-left: 0rem;
     width: 100%;

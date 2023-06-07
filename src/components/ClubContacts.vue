@@ -1,8 +1,8 @@
 <template>
   <section class="section-margin map">
-    <div class="row" v-if="width > 500">
+    <div class="row" v-if="width > 850">
       <div class="col-6"></div>
-      <div class="col-6">
+      <div class="col">
         <div class="flex flex-center q-pt-xl">
           <c-write-to-us-form />
         </div>
@@ -19,13 +19,6 @@ const width = window.screen.width;
 </script>
 
 <style scoped lang="scss">
-.card {
-  padding: 32px 95px;
-  background-color: #260f4a;
-
-  margin-bottom: 66px;
-}
-
 .map {
   margin-bottom: 160px;
   background-image: url("/assets/images/landing/map.png");
