@@ -70,11 +70,20 @@ section {
 }
 
 .container {
-  @media (max-width: 1000px) {
-    max-width: 290px;
-  }
-  @media (max-width: 1200px) and (min-width: 700px) {
+  @media (max-width: 1200px) and (min-width: 500px) {
     max-width: 740px;
+  }
+  @media (max-width: 900px) {
+    max-width: 700px;
+  }
+  @media (max-width: 700px) {
+    max-width: 500px;
+  }
+  @media (max-width: 600px) {
+    max-width: 400px;
+  }
+  @media (max-width: 500px) {
+    max-width: 300px;
   }
 }
 
@@ -84,7 +93,13 @@ section {
   }
 }
 .my-btn {
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
+    margin-top: 20px;
+  }
+  @media (max-width: 700px) {
+    margin-top: 0px;
+  }
+  @media (max-width: 600px) {
     margin-top: 20px;
   }
 }

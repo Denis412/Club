@@ -85,7 +85,7 @@ const flag = ref(false);
     font-size: 40px !important;
   }
 
-  @media (max-width: 850px) {
+  @media (max-width: 1200px) {
     font-size: 35px !important;
   }
 }
@@ -96,8 +96,6 @@ const flag = ref(false);
 .card {
   @media (max-width: 700px) {
     justify-content: center;
-  }
-  @media (max-width: 1200px) and (min-width: 700px) {
   }
 }
 </style>

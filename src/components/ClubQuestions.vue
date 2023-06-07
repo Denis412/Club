@@ -43,11 +43,23 @@ const questionList = ref([
 </script>
 <style scoped lang="scss">
 .container {
-  @media (max-width: 1000px) {
-    max-width: 290px;
-  }
-  @media (max-width: 1200px) and (min-width: 700px) {
+  @media (max-width: 1200px) and (min-width: 500px) {
     max-width: 740px;
+  }
+  @media (max-width: 900px) {
+    max-width: 700px;
+  }
+  @media (max-width: 700px) {
+    max-width: 500px;
+  }
+  @media (max-width: 600px) {
+    max-width: 450px;
+  }
+  @media (max-width: 500px) {
+    max-width: 350px;
+  }
+  @media (max-width: 400px) {
+    max-width: 250px;
   }
 }
 </style>
