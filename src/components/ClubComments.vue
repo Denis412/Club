@@ -57,7 +57,7 @@ const carousel = ref(null);
 let num_slides = 2.4;
 const width = window.screen.width;
 
-if (width < 800) {
+if (width < 900) {
   num_slides = 1;
 }
 const slides = [
@@ -126,7 +126,7 @@ const slides = [
   }
 }
 .photo {
-  @media (max-width: 700px) {
+  @media (max-width: 570px) {
     display: none;
   }
 }
