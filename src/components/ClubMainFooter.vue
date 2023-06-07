@@ -94,13 +94,13 @@ const socials = ref([
   &-logo {
     width: 56px;
   }
-  @media (max-width: 700px) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
   @media (max-width: 900px) {
     padding-left: 80px;
     padding-right: 80px;
+  }
+  @media (max-width: 700px) {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 .store-btn {
