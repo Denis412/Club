@@ -40,4 +40,10 @@ const { title, btnContent, cardsList } = defineProps({
 .shadow {
   z-index: -1;
 }
+
+.title {
+  @media (max-width: 600px) {
+    font-size: 25px !important;
+  }
+}
 </style>

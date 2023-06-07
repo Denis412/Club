@@ -20,7 +20,6 @@
       <c-teams />
       <c-string />
       <c-video-reviews />
-      <!-- нужны видео -->
     </main>
   </q-page>
 </template>
