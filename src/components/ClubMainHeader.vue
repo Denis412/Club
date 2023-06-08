@@ -9,7 +9,7 @@
           alt="logo"
         />
         <span class="text-h3" @click="toRoot"><span class="desktop-only q-ml-md">Клуб</span></span>
-        <q-tabs class="navigation main-tabs cursor-pointer desktop-only">
+        <q-tabs class="navigation main-tabs cursor-pointer">
           <q-route-tab
             no-caps
             name="business"
@@ -114,6 +114,14 @@ const toRoot = () => {
 
 .navigation {
   margin-left: 132px;
+
+  @media (max-width: 730px) {
+    display: none;
+  }
+
+  @media (max-width: 800px) {
+    margin-left: 20px !important;
+  }
 }
 
 .slide-enter-from,
